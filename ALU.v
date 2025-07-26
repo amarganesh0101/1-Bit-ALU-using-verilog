@@ -15,8 +15,8 @@ wire sum;
 wire diff;
 assign sum  = a0 ^ b0 ^ c_in;
 assign c_out = (a0 & b0)|(b0 & c_in)|(c_in & a0);
-assign diff = a0 ^ b0 ^ c_in;
-assign b_out = ((~a0 & b0) | ((~(a0 ^ b0)) & b_in));
+assign diff = a0 ^ b0 ^ b_in;
+assign b_out = (~a0 & b0) | (~(a0 ^ b0) & b_in);
 assign and_lu = a0 & b0;
 assign nor_lu = ~(a0 | b0);
 assign xor_lu = a0 ^ b0;
@@ -26,4 +26,4 @@ assign y = (sel == 3'b000) ? sum:
            (sel == 3'b011) ? nor_lu:
            (sel == 3'b111) ? xor_lu:
            1'b0;
-endmodule
+endmodule 
