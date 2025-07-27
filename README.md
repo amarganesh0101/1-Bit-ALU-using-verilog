@@ -35,11 +35,11 @@ Below is the block-level representation of the 1-bit ALU showing the Arithmetic 
 | `sel` value | Operation        | Output `y`  |
 |-------------|------------------|-------------|
 | `000`       | Sum (Add)        | `sum`       |
-| `001`       | Difference        | `diff`      |
-| `010`       | Bitwise AND       | `a0 & b0`   |
-| `011`       | Bitwise NOR       | `~(a0 | b0)`|
-| `111`       | Bitwise XOR       | `a0 ^ b0`   |
-| *others*    | Default (0)       | `1'b0`      |
+| `001`       | Difference       | `diff`      |
+| `010`       | Bitwise AND      | `a0 and b0` |
+| `011`       | Bitwise NOR      |`~(a0orb0)`  |
+| `111`       | Bitwise XOR      | `a0 ^ b0`   |
+| *others*    | Default (0)      | `1'b0`      |
 
 ## Files
 
